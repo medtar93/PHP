@@ -1,0 +1,27 @@
+PHP 9 jours
+Jour 1 à 3 : les bases
+Jour 4     : les superglobales
+Jour 5     : PDO + sécurité
+Jour 6 à 9 : site e-commerce
+
+
+-----------------------------------------
+Jour 5/9
+
+- PDO :
+   	- retour sur les méthodes query() et fetch() 
+   	- exercice
+
+    - fetch() et boucle while()
+    - fetchAll()
+    - exercice
+
+    - table HTML dynamique
+
+    - requête préparée : bindParam() et bindValue()
+    - requête préparée : points complémentaires
+
+    - exercice de synthèse
+
+- Formulaire et sécurité : espace de dialogue
+-----------------------------------------
