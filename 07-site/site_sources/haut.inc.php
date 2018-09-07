@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <!-- La marque -->
-       <a class="navbar-brand" href="<?php echo RACINE_SITE . 'boutique.php'; ?>">MA BOUTIQUE</a>
+       
        
         <!-- Le burger -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav1" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,26 +32,10 @@
         
         <!-- Le menu -->
         <div class="collapse navbar-collapse" id="nav1">
-	<ul class="navbar-nav ml-auto">
-	<?php
-		echo '<li><a class="nav-link" href="'. RACINE_SITE .'boutique.php">Boutique</a></li>';
-
-        // menu si internaute connecté :
-        if (internauteEstConnecte()) {
-            echo '<li><a class="nav-link" href="'. RACINE_SITE .'profil.php">Profil</a></li>';
-            echo '<li><a class="nav-link" href="'. RACINE_SITE .'connexion.php?action=deconnexion">Se déconnecter</a></li>';
-        } else {  // si il n'est pas connecté
-            echo '<li><a class="nav-link" href="'. RACINE_SITE .'inscription.php">Inscription</a></li>';
-            echo '<li><a class="nav-link" href="'. RACINE_SITE .'connexion.php">Connexion</a></li>';
-        }   
-
-        // menu si internaute est un admin :
-        if (internauteEstConnecteEtAdmin()) {
-            echo '<li><a class="nav-link" href="'. RACINE_SITE .'admin/gestion_boutique.php">Gestion de la boutique</a></li>';
-            echo '<li><a class="nav-link" href="'. RACINE_SITE .'admin/gestion_membre.php">Gestion des membres</a></li>';
-
-        }  
-        	?>
+        	<ul class="navbar-nav ml-auto">
+            	<?php
+					
+				?>
         	</ul>
         </div>
       </div>
@@ -59,7 +43,4 @@
 
    
     <!-- Page Content -->
-    <div class="container" style="min-height: 80vh;">
-        <!-- ici nous aurons le contenu spécifique de notre page -->
-
     
