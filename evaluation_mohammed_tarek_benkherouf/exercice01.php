@@ -24,21 +24,12 @@ $tableau = [
     "prenom" => "tarek",
     "nom" => "benkherouf",
     "adresse" => "142 avenue jean jaures",
-    "code_postale" => "93500",
+    "code_postal" => "93500",
     "ville" => "pantin",
     "email" => "tarek.benkherouf@lepoles.com",
     "telephone" => "06 00 00 00 00",
-    "date_naissance" => "25-12-1993",
+    "date_naissance" => "1993-12-25",
 ];
-
-// début affichage du tableau
- 
-echo '<pre>';
-    print_r($tableau);  
-echo '</pre>'; 
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -50,7 +41,25 @@ echo '</pre>';
 </head>
 <body>
 
+    <ul>
+        <?php
+            foreach ($tableau as $indice => $valeur) { // => lien entre un indice et sa valeur 
+                if( $indice != "date_naissance"){
+                    echo '<li>'.ucfirst(str_replace('_',' ',$indice)). ' : <strong>' . $valeur .'</strong></li>';
+                }
+                else{
+                    $date = new DateTime ($valeur);
+                  
+
+                    echo '<li>'.ucfirst(str_replace('_',' ', $indice)) . ' : <strong>' . $date -> format("d/m/Y") .'</strong></li>';
+
+                }
+                
+            
+            }
+        ?>
     
+    </ul>
     
     
 </body>

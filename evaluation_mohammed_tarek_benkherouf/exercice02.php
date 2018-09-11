@@ -1,14 +1,12 @@
 <?php
 
-if(isset($_POST['convert'])) {
- 
-    $valeur = $_POST['valeur'];
- 
-    $resultat = $valeur*0.865;
- 
-    echo '<p>'.$resultat.'</p>';
- 
+function ($montant, $devise) {
+
 }
+
+
+
+
 
 ?>
 <!DOCTYPE html>
@@ -32,24 +30,6 @@ if(isset($_POST['convert'])) {
     <input type="submit" name="validate" value="Envoyer">
 
 </form>
-<?php
 
-function conversionEnUsd($nombre) {
-     $resultat= $nombre * 1.085965;
-     return '<p>'. $nombre .'en euro = ' . $resultat . ' en USD.</p>';
-}
-function conversionEnEuro($nombre) {
-    $resultat= $nombre / 1.085965;
-    return '<p>'. $nombre .'en USD = ' . $resultat . ' en euro.</p>';
-}
-if(empty('valeur')  && 'value' == 'euro') { 
-    
-
-}
-
-
-
-
-?>
 </body>
 </html>
